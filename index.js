@@ -4,8 +4,6 @@ import kleur from 'kleur';
 /* slice-to-generate-cjs */
 
 
-const pseudoConsole = {};
-
 function generateConsofy (title) {
     if(!title) title = "consofy";
 
@@ -110,6 +108,8 @@ function generateConsofy (title) {
         },
         "timeEnd": "time",
     }
+
+    const pseudoConsole = {};
 
     
     const defaultKleur = () => kleur.underline();
