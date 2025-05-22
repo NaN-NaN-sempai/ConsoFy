@@ -1,8 +1,12 @@
 {
   "name": "consofy",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple custom console implementation. Output example: [ TITLE: ] Data...",
   "main": "index.js",
+  "exports": {
+    "import": "./index.js",
+    "require": "./index.cjs"
+  },
   "type": "module",
   "bin": {
     "consofyTest": "./test/test.js"

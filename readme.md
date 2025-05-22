@@ -7,7 +7,7 @@
 </a>
 
 [![npm v9.8.1](https://img.shields.io/badge/npm-v9.8.1-00FF00?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/consofy)
-![Unpacked Size: 214.4](https://img.shields.io/badge/Unpacked_Size-214.4_kB-00FF00?style=for-the-badge&color=5599FF)
+![Unpacked Size: 221.5](https://img.shields.io/badge/Unpacked_Size-221.5_kB-00FF00?style=for-the-badge&color=5599FF)
 <br>
 [![Github](https://img.shields.io/badge/github-00FF00?style=for-the-badge&logo=github&color=181717)](https://github.com/NaN-NaN-sempai/ConsoFy)
 [![Talk with me](https://img.shields.io/badge/talk_with_me-FFFF00?style=for-the-badge&logoColor=white&logo=whatsapp&color=25D366)](https://wa.me/5574981395580?text=I%20came%20from%20npm!)
@@ -46,7 +46,9 @@
 ## Support
 <div align="center">
 
-[![ES6 Module](https://img.shields.io/badge/ES6-Module-F7DF1E?style=for-the-badge&logo=javascript&logoColor=F7DF1E&color=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+[![ES6 Module](https://img.shields.io/badge/ES6-import-F7DF1E?style=for-the-badge&logo=javascript&logoColor=F7DF1E&color=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+[![Comonn JS](https://img.shields.io/badge/Common_js-require-F7DF1E?style=for-the-badge&logo=javascript&logoColor=F7DF1E&color=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+<br>
 ![Node.js](https://img.shields.io/badge/node.js-FFFF00?style=for-the-badge&logoColor=white&logo=node.js&color=339933)
 
 </div>

@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import generateConsofy from '../index.js';
 
 const consofy = generateConsofy('consofy');
