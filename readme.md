@@ -27,6 +27,7 @@ WIP
   - [CDN](#cdn)
 - [Example](#example)
   - [Methods](#methods)
+  - [Custom Methods](#custom-methods)
 - [Credits](#credits)
 
 ## Features
@@ -180,10 +181,39 @@ setTimeout(() => {
 ```
 
 
-<img src="./images/namedTime.png" height="120">
+<img src="./images/namedTime.png" height="100">
 
 
 You can check more methods runnig test command `npm test` and compare with the javascript console `npm test -- console`.
+
+### Custom Methods
+ConsoFy also has some custom methods:
+
+```javascript
+consofy.log("Blank line ↓");
+consofy.blank();
+consofy.log("Blank line↑");
+
+
+consofy.success("Success message!");
+```
+<img src="./images/custom.png" height="120">
+
+
+Use `typeCustom` to execute one method with a different style:
+```javascript
+consofy.typeCustom('log', 'error', 'This message is not an error');
+
+consofy.typeCustom('warn', 'info', 'Remender: This message is a warning');
+```
+<img src="./images/custom2.png" height="90">
+
+These are the supported styles:
+```javascript
+["success", "log", "error", "warn", "info", "debug", "time"]
+```
+
+
 
 ## Credits
 I created this tool while organizing a project that i was working on.

@@ -119,13 +119,10 @@ import generateConsofy from '../index.js';
 
 let consofy = generateConsofy('my console')
 
-
-consofy.time("time");
-setTimeout(() => {
-    consofy.timeLog("time", "my time log");
-},500);
-setTimeout(() => {
-    consofy.timeEnd("time");
 consofy.blank();
-consofy.blank();;
-},1000);
+consofy.blank();
+consofy.typeCustom('log', 'error', 'This message is not an error');
+consofy.blank();
+consofy.blank();
+consofy.typeCustom('warn', 'info', 'Reminder: This message is a warning');
+consofy.blank();
