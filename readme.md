@@ -1,18 +1,15 @@
 <div align="center">
 
-WIP
-
-<a href="https://github.com/NaN-NaN-sempai/useBase">
-  <img title="UseBase Logo" alt="UseBase Logo" width="300px" src="./images/logo.png" />
+<a href="https://github.com/NaN-NaN-sempai/ConsoFy/">
+  <img title="ConsoFy Logo" alt="ConsoFy Logo" width="300px" src="https://raw.githubusercontent.com/NaN-NaN-sempai/ConsoFy/refs/heads/main/images/logo.png" />
   
   # ConsoFy:<br>Your Console Clean and Stylish
 </a>
 
-
-[![npm v9.6.7](https://img.shields.io/badge/npm-v9.6.7-00FF00?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/usebase)
-![Unpacked Size: 17 kB](https://img.shields.io/badge/Unpacked_Size-17_kB-00FF00?style=for-the-badge&color=5599FF)
+[![npm v9.8.1](https://img.shields.io/badge/npm-v9.8.1-00FF00?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/consofy)
+![Unpacked Size: 214.7](https://img.shields.io/badge/Unpacked_Size-214.7_kB-00FF00?style=for-the-badge&color=5599FF)
 <br>
-[![Github](https://img.shields.io/badge/github-00FF00?style=for-the-badge&logo=github&color=181717)](https://github.com/NaN-NaN-sempai/useBase)
+[![Github](https://img.shields.io/badge/github-00FF00?style=for-the-badge&logo=github&color=181717)](https://github.com/NaN-NaN-sempai/ConsoFy)
 [![Talk with me](https://img.shields.io/badge/talk_with_me-FFFF00?style=for-the-badge&logoColor=white&logo=whatsapp&color=25D366)](https://wa.me/5574981395580?text=I%20came%20from%20npm!)
 
 </div>
@@ -93,7 +90,7 @@ import("generateConsofy").then(({ default: generateConsofy }) => {
 });
 
 // or in your async function
-const { generateConsofy: useBase } = await import("generateConsofy");
+const { default: generateConsofy } = await import("generateConsofy");
 
 const consofy = generateConsofy("my console");
 ```
@@ -102,14 +99,14 @@ const consofy = generateConsofy("my console");
 Using jsDelivr CDN (browser module): WIP
 ```html
 
-<script src="https://cdn.jsdelivr.net/npm/usebase@latest/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/consofy@latest/index.js"></script>
 
 ```
 
 Using unpkg CDN: WIP
 ```html
 
-<script src="https://unpkg.com/usebase@latest/index.js"></script>
+<script src="https://unpkg.com/consofy@latest/index.js"></script>
 
 ```
 
@@ -121,7 +118,7 @@ consofy.log("Hello World!")
 ```
 Result:
 
-<img src="./images/helloworld.png" height="60">
+<img src="https://raw.githubusercontent.com/NaN-NaN-sempai/ConsoFy/refs/heads/main/images/helloworld.png" height="60">
 
 Errors and Warnings:
 ```javascript
@@ -135,7 +132,7 @@ consofy.error("disable color","This is a error");
 
 Result:
 
-<img src="./images/error.png" height="100">
+<img src="https://raw.githubusercontent.com/NaN-NaN-sempai/ConsoFy/refs/heads/main/images/error.png" height="100">
 
 ### Methods
 Almost all the methods of the console were recreated in ConsoFy and the ones that weren't can be executed thru Consofy the same way as the javascript console. They may or may not work and if they don't you can simply use the javascript console as usual.
@@ -154,7 +151,7 @@ consofy.table("ignore object", {name: "John", surname: "Doe"});
 
 Result:
 
-<img src="./images/tables.png" height="400">
+<img src="https://raw.githubusercontent.com/NaN-NaN-sempai/ConsoFy/refs/heads/main/images/tables.png" height="400">
 
 Time:
 ```javascript
@@ -167,7 +164,7 @@ setTimeout(() => {
 },1000);
 ```
 
-<img src="./images/time.png" height="120">
+<img src="https://raw.githubusercontent.com/NaN-NaN-sempai/ConsoFy/refs/heads/main/images/time.png" height="120">
 
 Named Time:
 ```javascript
@@ -181,7 +178,7 @@ setTimeout(() => {
 ```
 
 
-<img src="./images/namedTime.png" height="100">
+<img src="https://raw.githubusercontent.com/NaN-NaN-sempai/ConsoFy/refs/heads/main/images/namedTime.png" height="100">
 
 
 You can check more methods runnig test command `npm test` and compare with the javascript console `npm test -- console`.
@@ -197,7 +194,7 @@ consofy.log("Blank line↑");
 
 consofy.success("Success message!");
 ```
-<img src="./images/custom.png" height="120">
+<img src="https://raw.githubusercontent.com/NaN-NaN-sempai/ConsoFy/refs/heads/main/images/custom.png" height="120">
 
 
 Use `typeCustom` to execute one method with a different style:
@@ -206,7 +203,7 @@ consofy.typeCustom('log', 'error', 'This message is not an error');
 
 consofy.typeCustom('warn', 'info', 'Remender: This message is a warning');
 ```
-<img src="./images/custom2.png" height="90">
+<img src="https://raw.githubusercontent.com/NaN-NaN-sempai/ConsoFy/refs/heads/main/images/custom2.png" height="90">
 
 These are the supported styles:
 ```javascript
