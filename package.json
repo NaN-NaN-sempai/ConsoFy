@@ -1,11 +1,22 @@
 {
   "name": "consofy",
-  "version": "1.0.15",
+  "version": "1.0.24",
   "description": "Simple custom console implementation. Output example: [ TITLE: ] Data...",
   "main": "index.js",
+  "types": "./index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "index.d.ts"
+      ]
+    }
+  },
   "exports": {
-    "import": "./index.js",
-    "require": "./index.cjs"
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs",
+      "types": "./index.d.ts"
+    }
   },
   "type": "module",
   "bin": {
@@ -14,7 +25,7 @@
   },
   "scripts": {
     "test": "node test/test.js"
-  },  
+  },
   "keywords": [
     "console",
     "log",
