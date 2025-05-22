@@ -103,14 +103,14 @@ const consofy = generateConsofy("my console");
 ```
 
 ### CDN
-Using jsDelivr CDN (browser module): WIP
+Using jsDelivr CDN (browser module):
 ```html
 
 <script src="https://cdn.jsdelivr.net/npm/consofy@latest/index.js"></script>
 
 ```
 
-Using unpkg CDN: WIP
+Using unpkg CDN:
 ```html
 
 <script src="https://unpkg.com/consofy@latest/index.js"></script>
