@@ -63,7 +63,7 @@ interface ConsofyConsole {
  * @param title The prefix title that appears before every console message.
  * @returns A custom console instance.
  */
-export default function generateConsofy(title: string): ConsofyConsole {
+declare function generateConsofy(title: string): ConsofyConsole {
     return {
         log: (...data: any[]) => console.log(title, ...data),
         error: (...data: any[]) => console.error(title, ...data),
@@ -80,13 +80,13 @@ export default function generateConsofy(title: string): ConsofyConsole {
         count: (...data: any[]) => console.count(...data),
         countReset: (...data: any[]) => console.countReset(...data),
         table: (...data: any[]) => console.table(...data),
-        clear: (...data: any[]) => console.clear(...data),
+        clear: (...data: any[]) => console.clear(),
         success: (...data: any[]) => console.log(`%c✔ ${title}`, "color: green", ...data),
         blank: () => console.log(''),
         typeCustom: (type: string, colorScheme: string, ...data: any[]) => {
-            console[type](`%c${title}`, `color: ${color}`, ...data);
+            console[type](`%c${title}`, `color: ${colorScheme}`, ...data);
         },
     };
 }
 
-export = generateConsofy;
+export default generateConsofy;

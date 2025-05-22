@@ -69,6 +69,13 @@ consofy.log("Hello World!");
 
 About it's usage, the module imports a `generateConsofy` function that recieve a param `title`, the text that will be shown in the console for this `consofy` instance.
 
+<div align="center">
+
+<h3>Live example:<h3>
+
+<img src="https://raw.githubusercontent.com/NaN-NaN-sempai/ConsoFy/refs/heads/main/images/liveExample.png" height="400">
+</div>
+
 
 ## Installing
 Install the package using npm:

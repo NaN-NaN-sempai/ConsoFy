@@ -1,6 +1,6 @@
 {
   "name": "consofy",
-  "version": "1.0.25",
+  "version": "1.0.24",
   "description": "Simple custom console implementation. Output example: [ TITLE: ] Data...",
   "main": "index.js",
   "types": "./index.d.ts",
