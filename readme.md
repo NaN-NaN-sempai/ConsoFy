@@ -83,16 +83,10 @@ import generateConsofy from "consofy";
 const consofy = generateConsofy("my console");
 ```
 
-If you are using `CommomJS`, there are some ways to import the module, one of them is using the import async function:
+If you are using `CommomJS`:
 
 ```javascript
-import("generateConsofy").then(({ default: generateConsofy }) => {
-    const consofy = generateConsofy("my console");
-    /* your code... */
-});
-
-// or in your async function
-const { default: generateConsofy } = await import("generateConsofy");
+const generateConsofy = require("consofy");
 
 const consofy = generateConsofy("my console");
 ```
