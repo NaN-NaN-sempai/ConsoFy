@@ -3,7 +3,7 @@
 WIP
 
 <a href="https://github.com/NaN-NaN-sempai/useBase">
-  <img title="UseBase Logo" alt="UseBase Logo" width="300px" src="https://raw.githubusercontent.com/NaN-NaN-sempai/useBase/main/logo.png" />
+  <img title="UseBase Logo" alt="UseBase Logo" width="300px" src="./images/logo.png" />
   
   # ConsoFy:<br>Your Console Clean and Stylish
 </a>
