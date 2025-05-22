@@ -181,7 +181,7 @@ setTimeout(() => {
 <img src="https://raw.githubusercontent.com/NaN-NaN-sempai/ConsoFy/refs/heads/main/images/namedTime.png" height="100">
 
 
-You can check more methods runnig test command `npm test` and compare with the javascript console `npm test -- console`.
+You can check more methods runnig test command `consofyTest` and compare with the javascript console `consofyTest -- console`.
 
 ### Custom Methods
 ConsoFy also has some custom methods:
