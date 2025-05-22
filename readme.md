@@ -29,6 +29,7 @@
 
 ## Features
 - ✅ Simple and clean console formatting
+- ✅ Full JS Doc implementation
 - ✅ Colored tags for each log type (log, info, warn, error, success, debug...)
 - ✅ Custom title/prefix for each instance
 - ✅ Native console methods supported (log, error, warn, info, trace, time, count, etc.)
