@@ -1,0 +1,35 @@
+{
+  "name": "consofy",
+  "version": "1.0.0",
+  "description": "Simple custom console implementation. Output example: [ TITLE: ] Data...",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test/test.js"
+  },  
+  "keywords": [
+    "console",
+    "log",
+    "info",
+    "warn",
+    "error",
+    "custom",
+    "color",
+    "custom console",
+    "customized console",
+    "custom log",
+    "custom info",
+    "custom warn",
+    "custom error",
+    "colored console",
+    "colored log",
+    "colored info",
+    "colored warn",
+    "colored error"
+  ],
+  "author": "Luís Henrique de Almeida",
+  "license": "ISC",
+  "dependencies": {
+    "kleur": "^4.1.5"
+  }
+}

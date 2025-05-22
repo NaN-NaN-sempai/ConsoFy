@@ -1,0 +1,32 @@
+.log - This is a log message
+.info - This is an info message
+.warn - This is a warning
+.error - This is an error
+.debug - This is a debug message
+
+Trace: .trace - This is a trace
+    at Object.<anonymous> (C:\Users\lubiz\Downloads\Coisas\Programação\ConSys\ConSys\test\test.js:16:13)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:86:12)
+    at node:internal/main/run_main_module:23:47
+{ method: '.dir', example: 'Shows object structure' }
+.log - Timer started
+Assertion failed: .assert - This should trigger assert
+.group - Group Start
+  .log - Inside group
+.count - Counter: 1
+.count - Counter: 2
+┌─────────┬──────────┬─────────┬─────┐
+│ (index) │  method  │  name   │ age │
+├─────────┼──────────┼─────────┼─────┤
+│    0    │ '.table' │ 'Alice' │ 25  │
+│    1    │ '.table' │  'Bob'  │ 30  │
+└─────────┴──────────┴─────────┴─────┘
+disable color .log - This log has no color
+(node:26404) Warning: Count for '.countReset - Counter reset' does not exist
+(Use `node --trace-warnings ...` to show where the warning was created)
+time: 507.878ms
+.timeEnd - Timer ended
