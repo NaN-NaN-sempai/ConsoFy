@@ -1,4 +1,6 @@
-/* import generateConsofy from '../index.js';
+#!/usr/bin/env node
+
+import generateConsofy from '../index.js';
 
 const consofy = generateConsofy('consofy');
 
@@ -7,12 +9,9 @@ const args = process.argv.slice(2);
 let consoleTest;
 
 
-
 if(args[0] == "console") consoleTest = console;
-else consoleTest = consofy; */
+else consoleTest = consofy; 
 
-
-/* 
 
 consoleTest.clear();
 consoleTest.log('.log - This is a log message');
@@ -111,18 +110,3 @@ setTimeout(() => {
             consoleTest.log('To run the test for the javascript console, run "npm test -- console"');
     }, 500);
 }, 500);
-
- */
-
-
-import generateConsofy from '../index.js';
-
-let consofy = generateConsofy('my console')
-
-consofy.blank();
-consofy.blank();
-consofy.typeCustom('log', 'error', 'This message is not an error');
-consofy.blank();
-consofy.blank();
-consofy.typeCustom('warn', 'info', 'Reminder: This message is a warning');
-consofy.blank();

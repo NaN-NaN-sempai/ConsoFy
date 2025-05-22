@@ -7,7 +7,7 @@
 </a>
 
 [![npm v9.8.1](https://img.shields.io/badge/npm-v9.8.1-00FF00?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/consofy)
-![Unpacked Size: 214.7](https://img.shields.io/badge/Unpacked_Size-214.7_kB-00FF00?style=for-the-badge&color=5599FF)
+![Unpacked Size: 214.4](https://img.shields.io/badge/Unpacked_Size-214.4_kB-00FF00?style=for-the-badge&color=5599FF)
 <br>
 [![Github](https://img.shields.io/badge/github-00FF00?style=for-the-badge&logo=github&color=181717)](https://github.com/NaN-NaN-sempai/ConsoFy)
 [![Talk with me](https://img.shields.io/badge/talk_with_me-FFFF00?style=for-the-badge&logoColor=white&logo=whatsapp&color=25D366)](https://wa.me/5574981395580?text=I%20came%20from%20npm!)
@@ -65,12 +65,12 @@ npm install consofy
 
 (optional) Run the test to learn all the supported methods:
 ```css
-npm test
+consofyTest
 ```
 
 (optional) Run the test with the javascript console:
 ```css
-npm test -- console
+consofyTest -- console
 ```
 
 Once the package is installed, you can import ConsoFy to your project:
