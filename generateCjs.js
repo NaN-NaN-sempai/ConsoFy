@@ -12,7 +12,8 @@ let mjs = fs.readFileSync("./index.js", "utf-8");
 
 mjs.split("/* slice-to-generate-cjs */")
 
-let cjs = `// AUTO GENERATED IN "generateCjs.js" 
+let cjs = `// @ts-check
+// // AUTO GENERATED IN "generateCjs.js" 
 const kleur = require('kleur');
 ${mjs.split("/* slice-to-generate-cjs */")[1]}
 module.exports = generateConsofy;`;

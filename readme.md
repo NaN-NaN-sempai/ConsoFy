@@ -7,7 +7,7 @@
 </a>
 
 [![npm v9.8.1](https://img.shields.io/badge/npm-v9.8.1-00FF00?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/consofy)
-![Unpacked Size: 221.5](https://img.shields.io/badge/Unpacked_Size-221.5_kB-00FF00?style=for-the-badge&color=5599FF)
+![Unpacked Size: 223.9 kB](https://img.shields.io/badge/Unpacked_Size-223.9_kB-00FF00?style=for-the-badge&color=5599FF)
 <br>
 [![Github](https://img.shields.io/badge/github-00FF00?style=for-the-badge&logo=github&color=181717)](https://github.com/NaN-NaN-sempai/ConsoFy)
 [![Talk with me](https://img.shields.io/badge/talk_with_me-FFFF00?style=for-the-badge&logoColor=white&logo=whatsapp&color=25D366)](https://wa.me/5574981395580?text=I%20came%20from%20npm!)
