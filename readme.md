@@ -196,7 +196,7 @@ ConsoFy also has some custom methods:
 ```javascript
 consofy.log("Blank line ↓");
 consofy.blank();
-consofy.log("Blank line↑");
+consofy.log("Blank line ↑");
 
 
 consofy.success("Success message!");
