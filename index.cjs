@@ -1,4 +1,6 @@
+// AUTO GENERATED IN "generateCjs.js" 
 const kleur = require('kleur');
+
 
 const defaultKleur = () => kleur.underline();
 const defaultStyle = (txt, type="log") => colors[type].title(defaultKleur(), ` ${txt.toUpperCase()} `);
@@ -111,6 +113,28 @@ const colors = {
 }
 
 /**
+ * @typedef {Object} Consofy
+ * @property {function(...any): void} log - Log normal.
+ * @property {function(...any): void} info - Mensagem informativa.
+ * @property {function(...any): void} warn - Aviso.
+ * @property {function(...any): void} error - Erro.
+ * @property {function(...any): void} success - Log de sucesso.
+ * @property {function(...any): void} blank - Linha em branco.
+ * @property {function(...any): void} trace - Trace com stack.
+ * @property {function(...any): void} dir - Visualiza objetos.
+ * @property {function(...any): void} time - Inicia contador.
+ * @property {function(...any): void} timeEnd - Finaliza contador.
+ * @property {function(...any): void} timeLog - Log do contador.
+ * @property {function(...any): void} assert - Faz uma verificação.
+ * @property {function(...any): void} group - Agrupa logs.
+ * @property {function(...any): void} count - Faz um contador.
+ * @property {function(...any): void} countReset - Reseta contador.
+ * @property {function(...any): void} table - Tabela no console.
+ * @property {function(...any): void} clear - Limpa o console.
+ * @property {function(string, string, ...any): void} typeCustom - Log customizado com tipo e cor.
+ */
+
+/**
  * Creates a customized console with colored output and prefixed titles.
  *
  * Supports all native console methods (log, error, warn, info, etc.)
@@ -121,7 +145,7 @@ const colors = {
  *
  * @function createInstance
  * @param {string} title - A prefix/title that will appear before all console outputs.
- * @returns {Object} - An object with all console methods customized.
+ * @returns {Consofy} - An object with all console methods customized.
  *
  * @example
  * const generateconsofy = require('consofy');
@@ -207,6 +231,7 @@ function generateConsofy (title) {
 
     return pseudoConsole;
 }
+
 
 
 module.exports = generateConsofy;

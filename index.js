@@ -1,10 +1,37 @@
-// const kleur = require('kleur');
+// @ts-check
 
+// Run generateCjs to generate "index.cjs"
 import kleur from 'kleur';
+
+/* slice-to-generate-cjs */
 
 const defaultKleur = () => kleur.underline();
 const defaultStyle = (txt, type="log") => colors[type].title(defaultKleur(), ` ${txt.toUpperCase()} `);
 
+/**
+ * @typedef {Object} PseudoConsole
+ * @property {(type: string, color: string, ...data: any[]) => void} typeCustom
+ * @property {(...data: any[]) => void} log
+ * @property {(...data: any[]) => void} error
+ * @property {(...data: any[]) => void} warn
+ * @property {(...data: any[]) => void} info
+ * @property {(...data: any[]) => void} debug
+ * @property {(...data: any[]) => void} trace
+ * @property {(...data: any[]) => void} dir
+ * @property {(...data: any[]) => void} time
+ * @property {(...data: any[]) => void} timeEnd
+ * @property {(...data: any[]) => void} timeLog
+ * @property {(...data: any[]) => void} assert
+ * @property {(...data: any[]) => void} group
+ * @property {(...data: any[]) => void} count
+ * @property {(...data: any[]) => void} countReset
+ * @property {(...data: any[]) => void} table
+ * @property {(...data: any[]) => void} clear
+ * @property {(...data: any[]) => void} success
+ * @property {(...data: any[]) => void} blank
+ */
+
+/** @type {Partial<PseudoConsole>} */
 const pseudoConsole = {}
 
 
@@ -112,40 +139,23 @@ const colors = {
     "timeEnd": "time",
 }
 
+
 /**
- * Creates a customized console with colored output and prefixed titles.
+ * Generates a customized console instance with styled and titled outputs.
  *
- * Supports all native console methods (log, error, warn, info, etc.)
- * and extra custom methods like "success".
- *
- * Pass "disable color" as the first argument to disable colors for a one call.
- * The 'log' method does not override the text color.
- *
- * @function createInstance
- * @param {string} title - A prefix/title that will appear before all console outputs.
- * @returns {Object} - An object with all console methods customized.
+ * @function generateConsofy
+ * @param {string} [title="consofy"] - The prefix title that appears before every console message.
+ * @returns {PseudoConsole} - Customized console with extra methods like success, blank, and typeCustom.
  *
  * @example
- * const generateconsofy = require('consofy');
- * const consofy = generateConsofy('My App');
- * 
- * consofy.log('Normal log');
- * consofy.error('An error occurred');
- * consofy.warn('This is a warning');
- * consofy.info('Some information');
- * consofy.success('Operation successful'); // Custom method
- * consofy.blank(); // Custom method
- * 
- * consofy.table({ name: 'John', age: 30 });
- * consofy.table('disable color', { name: 'John', age: 30 }); // Hides the object
- * 
- * // Disable colors for one call:
- * consofy.error(
- *     'disable color',
- *     'This will not be colored'
- * );
+ * const consofy = generateConsofy('MyApp');
+ * consofy.log('This is a log');
+ * consofy.error('This is an error');
+ * consofy.success('This is a success');
+ * consofy.typeCustom('log', 'magenta', 'Custom log');
  */
 function generateConsofy (title) {
+    if(!title) title = "consofy";
 
     const setupValues = (color) => {
         let titleText = title.toUpperCase();
@@ -175,15 +185,6 @@ function generateConsofy (title) {
         return selectedMethod(preText, ...sentData);
     }
 
-    /**
-     * Applies a custom title color to the prefix of the log message.
-     * @function typeCustom
-     * @param {string} type - The type of log method to override.
-     * @param {string} color - The name of the color to use.
-     * @param {...*} data - The data to be passed to the log method.
-     * @example
-     * consofy.typeCustom('log', 'yellow', 'This log message will have a yellow title');
-     */
     pseudoConsole.typeCustom = (type, color, ...data) => {
         let {preText, colorObj} = setupValues(color);
                 
@@ -207,8 +208,11 @@ function generateConsofy (title) {
     for (let type in overrideMethods)
         injectInPseudo(type); //pseudoConsole[type] = overrideMethods[type];
 
-    return pseudoConsole;
+    return /** @type {PseudoConsole} */ (pseudoConsole);
 }
 
 
+
+
+/* slice-to-generate-cjs */
 export default generateConsofy;

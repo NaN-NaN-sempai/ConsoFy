@@ -1,6 +1,6 @@
 {
   "name": "consofy",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Simple custom console implementation. Output example: [ TITLE: ] Data...",
   "main": "index.js",
   "exports": {
@@ -9,7 +9,8 @@
   },
   "type": "module",
   "bin": {
-    "consofyTest": "./test/test.js"
+    "consofyTest": "./test/test.js",
+    "generateCjs": "./generateCjs.js"
   },
   "scripts": {
     "test": "node test/test.js"
