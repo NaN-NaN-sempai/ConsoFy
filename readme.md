@@ -56,6 +56,16 @@
 ## About
 Consofy is a simple tool to organize your logs. It's easy to use and works just like the default JavaScript `console` object, behaving in the same way.
 
+The name `ConsoFy` was created to keep the same word structure as the word console, making it easy to write when coding. The suffix `-Fy` was added to suggest the idea of transforming or enhancing the console.
+
+Example:
+```javascript
+// standard vs consofy
+console.log("Hello World!");
+consofy.log("Hello World!");
+```
+
+
 About it's usage, the module imports a `generateConsofy` function that recieve a param `title`, the text that will be shown in the console for this `consofy` instance.
 
 
