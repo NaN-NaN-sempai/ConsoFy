@@ -107,7 +107,7 @@ import { consofy } from "consofy";
 // this is usefull in the case of a fast test or a sigle file implementation
 // if you want to organize your modules make sure to use generateConsofy("...")
 
-consofy.title = "MY CONSOLE"; // if not set the title will be "<anonymouse>"
+consofy.title = "MY CONSOLE"; // if not set the title will be "<anonymous>"
 ```
 
 If you are using `CommomJS`:
@@ -123,7 +123,7 @@ const { consofy } = require("consofy");
 // the same is true to Common JS, all files that require consofy will share the same instance
 // if you want to organize your modules make sure to use generateConsofy("...")
 
-consofy.title = "MY CONSOLE"; // if not set the title will be "<anonymouse>"
+consofy.title = "MY CONSOLE"; // if not set the title will be "<anonymous>"
 ```
 
 ### CDN
