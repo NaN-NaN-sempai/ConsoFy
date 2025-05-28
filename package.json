@@ -1,6 +1,6 @@
 {
   "name": "consofy",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "description": "Simple custom console implementation. Output example: [ TITLE: ] Data...",
   "main": "index.js",
   "types": "./index.d.ts",
@@ -24,6 +24,7 @@
     "generateCjs": "./generateCjs.js"
   },
   "scripts": {
+    "tempTest": "node test/tempTest.js",
     "test": "node test/test.js"
   },
   "keywords": [
