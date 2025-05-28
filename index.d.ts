@@ -109,3 +109,4 @@ declare function generateConsofy(title: string): ConsofyConsole {
 }
 
 export default generateConsofy;
+export const consofy = generateConsofy();
