@@ -14,7 +14,26 @@ interface ConsofyConsole {
     /** Debug output (black). */
     debug(...data: any[]): void;
 
-    /** Shows the stack trace of execution. ⚠️ Passing large objects might generate very long output.  */
+    /** Shows the stack trace of execution. ⚠️ Passing large objects might generate very long output.
+     *    The first argument can be a Object containing some options to treat the output.
+     * "shortenPath", "filterLines", "replace", "colorByRegex"
+     *    - shortenPath: boolean - Shorten the path of the file. Default: false.
+     *    - filterLines: Array<string> - Hide the lines of the stack trace that contain any of the strings in the array. Default: [].
+     *    - replace: Object - Replace the text in the stack trace that is equal to the key of the object by the value. Default: {}.
+     *      - Example: { "value to be replaced": "new value" }
+     *    - colorByRegex: Array<Object> - Color the text in the stack trace that matches the regex. Default: [].
+     *      - Example: 
+     * 
+     *      [{ // colorize the text between quotes
+     * 
+     *          check: /(["'])(.*?)(\1)/g,
+     * 
+     *          callback: (colors, _, quote, content) => `${quote}${colors.yellow(content)}${quote}` )
+     * 
+     *      }];
+     *      - The supported colors are:
+     * 
+     *      [cyan, yellow, red, green, blue, magenta, gray] */
     trace(...data: any[]): void;
 
     /** Displays a list of all properties of a specified object. */

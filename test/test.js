@@ -34,6 +34,30 @@ consoleTest.log('.blank - There should be a blank line ↑');
 console.log('');
 consoleTest.trace('.trace - This is a trace');
 console.log('');
+consoleTest.trace({
+    shortenPath: true,
+    filterLines: ["ModuleJob"],
+    replace: {
+        "traceFunction": "<my replaced string>"
+    },
+    colorByRegex: [
+        {
+            check: /(["'])(.*?)(\1)/g,
+            callback: (colors, _, quote, content) => `${quote}${colors.yellow(content)}${quote}`
+        },
+        {
+            check: /undefined/g,
+            callback: (colors) => {
+                return colors.red("undefined");
+            }
+        },
+        {
+            check: /<my replaced string>/g,
+            callback: (colors, content) => colors.cyan(content)
+        }
+    ]
+},'.trace - This is a trace with options');
+console.log('');
 consoleTest.dir({ method: '.dir', example: 'Shows object structure' });
 
 console.log('');

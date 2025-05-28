@@ -7,7 +7,7 @@
 </a>
 
 [![npm v9.8.1](https://img.shields.io/badge/npm-v9.8.1-00FF00?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/consofy)
-![Unpacked Size: 28.4 kB kB](https://img.shields.io/badge/Unpacked_Size-28.4_kB-00FF00?style=for-the-badge&color=5599FF)
+![Unpacked Size: 41.2 kB kB](https://img.shields.io/badge/Unpacked_Size-41.2_kB-00FF00?style=for-the-badge&color=5599FF)
 <br>
 [![Github](https://img.shields.io/badge/github-00FF00?style=for-the-badge&logo=github&color=181717)](https://github.com/NaN-NaN-sempai/ConsoFy)
 [![Talk with me](https://img.shields.io/badge/talk_with_me-FFFF00?style=for-the-badge&logoColor=white&logo=whatsapp&color=25D366)](https://wa.me/5574981395580?text=I%20came%20from%20npm!)
@@ -55,7 +55,7 @@
 </div>
 
 ## About
-Consofy is a simple tool to organize your logs. It's easy to use and works just like the default JavaScript `console` object, behaving in the same way.
+ConsoFy is a simple tool to organize your logs. It's easy to use and works just like the default JavaScript `console` object, behaving in the same way.
 
 The name `ConsoFy` was created to keep the same word structure as the word console, making it easy to write when coding. The suffix `-Fy` was added to suggest the idea of transforming or enhancing the console.
 
@@ -98,7 +98,16 @@ Once the package is installed, you can import ConsoFy to your project:
 ```javascript
 import generateConsofy from "consofy";
 
-const consofy = generateConsofy("my console");
+const consofy = generateConsofy("MY CONSOLE");
+
+// Or
+
+import { consofy } from "consofy";
+// by doing this way, all files that import consofy will share the same instance
+// this is usefull in the case of a fast test or a sigle file implementation
+// if you want to organize your modules make sure to use generateConsofy("...")
+
+consofy.title = "MY CONSOLE"; // if not set the title will be "<anonymouse>"
 ```
 
 If you are using `CommomJS`:
@@ -106,7 +115,15 @@ If you are using `CommomJS`:
 ```javascript
 const generateConsofy = require("consofy");
 
-const consofy = generateConsofy("my console");
+const consofy = generateConsofy("MY CONSOLE");
+
+// Or
+
+const { consofy } = require("consofy");
+// the same is true to Common JS, all files that require consofy will share the same instance
+// if you want to organize your modules make sure to use generateConsofy("...")
+
+consofy.title = "MY CONSOLE"; // if not set the title will be "<anonymouse>"
 ```
 
 ### CDN
@@ -152,6 +169,36 @@ Result:
 Almost all the methods of the console were recreated in ConsoFy and the ones that weren't can be executed thru Consofy the same way as the javascript console. They may or may not work and if they don't you can simply use the javascript console as usual.
 
 Some methods:
+
+Trace - ConsoFy traces has some usefull options:
+```javascript
+consofy.trace('This is a trace');
+
+// Trace With options
+consofy.trace({
+    shortenPath: true, // hides most part of the paths shown in the console
+    filterLines: ["ModuleJob"], // hides the lines that contain any value of the array
+    replace: { // replace the text in the stack trace that is equal to the key of the object by the value
+        "traceFunction": "<my replaced string>"
+    },
+    colorByRegex: [ // colorize the text in the stack trace that matches the regex
+        {
+            check: /(["'])(.*?)(\1)/g, // paints text inside quotes yellow
+            callback: (colors, _, quote, content) => `${quote}${colors.yellow(content)}${quote}`
+        },
+        {
+            check: /<my replaced string>/g, // paints "<my replaced string>" cyan
+            callback: (colors, content) => colors.cyan(content)
+        }
+    ] // The supported colors are: [cyan, yellow, red, green, blue, magenta, gray]
+},'This is a trace with options');
+```
+
+Result:
+
+<img src="https://raw.githubusercontent.com/NaN-NaN-sempai/ConsoFy/refs/heads/main/images/trace.png" height="220">
+
+
 
 Table:
 ```javascript

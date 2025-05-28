@@ -12,11 +12,13 @@ let mjs = fs.readFileSync("./index.js", "utf-8");
 
 mjs.split("/* slice-to-generate-cjs */")
 
-let cjs = `// @ts-check
+let cjs = `
 // // AUTO GENERATED IN "generateCjs.js" 
 const kleur = require('kleur');
+const path = require('path');
 ${mjs.split("/* slice-to-generate-cjs */")[1]}
-module.exports = generateConsofy;`;
+module.exports = generateConsofy;
+module.exports.consofy = generateConsofy();`;
 
 consofy.warn('Writing "index.cjs"...');
 
